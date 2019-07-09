@@ -127,9 +127,10 @@ static UIRectCorner _roundedCornersDefault = UIRectCornerAllCorners;
 - (void)updateBorder {
   [super updateBorder];
   UIColor *borderColor = self.textInput.isEditing ? self.activeColor : self.normalColor;
-  self.textInput.borderView.borderStrokeColor =
-      (self.isDisplayingCharacterCountError || self.isDisplayingErrorText) ? self.errorColor
-                                                                           : borderColor;
+    //  self.textInput.borderView.borderStrokeColor =
+    //      (self.isDisplayingCharacterCountError || self.isDisplayingErrorText) ? self.errorColor
+    //                                                                           : borderColor;
+    self.textInput.borderView.borderStrokeColor = [UIColor clearColor];
   self.textInput.borderView.borderPath.lineWidth = self.textInput.isEditing ? 2 : 1;
 }
 
